@@ -1,7 +1,7 @@
 var path = require('path');
 const fs = require('fs');
 var os = require('os'); 
-var lib = require('./lib/lib'); 
+var lib = require('./lib/helper'); 
 const TakeMeBtn = "#shorturl-go > strong";
 const CloseBtn = "#btnCloseP";
 /*(async () => {
@@ -52,7 +52,9 @@ var main = async function () {
   operation.attempt(async function(){
   browser=await lib.getBrowser()
   page=await getBooURL(browser,process.argv[2]);
-  console.log(page.url())
+  //console.log(page.url())
+  checkUrl = await page.evaluate(() => location.href)
+   console.log(checkUrl)
   browser.close();
   })
 }
