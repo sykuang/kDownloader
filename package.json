@@ -7,9 +7,15 @@
     "puppeteer": "^2.1.0",
     "retry": "^0.12.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.9.8",
+    "@types/puppeteer": "^2.0.1",
+    "tslib": "^1.11.1",
+    "typescript-eslint": "0.0.1-alpha.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",
