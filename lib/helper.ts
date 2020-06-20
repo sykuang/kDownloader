@@ -1,7 +1,7 @@
 import * as  puppeteer from 'puppeteer';
-export async function getBrowser() : Promise<any> {
+export async function getBrowser(headlessMode=true) : Promise<any> {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: headlessMode,
     args: ['--no-sandbox'],
   });
   return browser

@@ -7,7 +7,8 @@ const TakeMeBtn : string = "#shorturl-go > strong";
 const CloseBtn : string = "#btnCloseP";
 export async function getBooURL(browser : any, url : string) : Promise<any> {
   const page = await browser.newPage();
-  await page.goto(url, 30000, "domcontentloaded");
+  await page.setDefaultNavigationTimeout(0);
+  await page.goto(url, 300000, "domcontentloaded");
   for (var i = 0; i < 2; i++) {
     var cnt : number = i + 2;
     var CloseBtnWithIndex : string = CloseBtn + cnt + ""
