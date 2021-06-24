@@ -4,17 +4,23 @@
   "description": "",
   "main": "BooTransfer.js",
   "dependencies": {
-    "puppeteer": "^2.1.0",
+    "argparse": "^2.0.1",
+    "loglevel": "^1.7.1",
+    "loglevel-plugin-prefix": "^0.8.4",
+    "puppeteer": "^2.1.1",
     "retry": "^0.12.0"
   },
   "devDependencies": {
+    "@types/argparse": "^2.0.8",
     "@types/node": "^13.9.8",
     "@types/puppeteer": "^2.0.1",
-    "tslib": "^1.11.1",
+    "ts-node": "^10.0.0",
+    "tslib": "^1.14.1",
+    "typescript": "^4.3.4",
     "typescript-eslint": "0.0.1-alpha.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run build && node dist/BooTransfer.js",
     "build": "tsc -p tsconfig.json"
   },
   "repository": {
